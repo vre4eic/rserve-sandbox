@@ -15,7 +15,7 @@ RUN echo 'install.packages("Rserve",,"http://rforge.net/",type="source")' > /tmp
     && Rscript /tmp/packages2.R
 
 # Popular data science packages
-# RUN echo 'install.packages(c("data.table", "dplyr", "plyr", "scales", "lubridate", "ggplot2", "grid", "BSDA", "cluster", "clustertend", "factoextra", "heatmaply", "NbClust", "RColorBrewer", "pandoc"), repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R \
+RUN echo 'install.packages(c("data.table", "dplyr", "plyr", "scales", "lubridate", "ggplot2", "grid", "BSDA", "cluster", "clustertend", "factoextra", "heatmaply", "NbClust", "RColorBrewer", "pandoc"), repos="http://cran.us.r-project.org", dependencies=TRUE)' > /tmp/packages.R \
 #    && Rscript /tmp/packages.R
 
 # Disable development tools
