@@ -1,4 +1,5 @@
 DOPTS=--net=none --detach --name=rserve
+VOL=-v /home/rserve:/rserve
 
 all::
 	@echo "Targets:"
@@ -11,7 +12,7 @@ image:	Dockerfile
 	docker build -t rserve .
 
 run:
-	docker run $(DOPTS) rserve
+	docker run $(DOPTS) $(VOL) rserve
 
 install:
-	docker run $(DOPTS) --restart=unless-stopped rserve
+	docker run $(DOPTS) --restart=unless-stopped $(VOL) rserve
