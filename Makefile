@@ -1,4 +1,5 @@
 DOPTS=--net=none --detach --name=rserve
+LOPTS=--limit-data=20000000 --limit-time=86400 --limit-file=10000000
 VOL=-v /home/rserve:/rserve
 
 all::
@@ -12,7 +13,7 @@ image:	Dockerfile
 	docker build -t rserve .
 
 run:
-	docker run $(DOPTS) $(VOL) rserve
+	docker run $(DOPTS) $(VOL) rserve $(LOPTS)
 
 install:
-	docker run $(DOPTS) --restart=unless-stopped $(VOL) rserve
+	docker run $(DOPTS) --restart=unless-stopped $(VOL) rserve $(LOPTS)
