@@ -1,4 +1,4 @@
-DOPTS=--net=none --detach --name=rserve
+DOPTS=--net=none --detach --name=kbswish_rserve
 LOPTS=--limit-data=20000000 --limit-time=86400 --limit-file=10000000
 VOL=-v /home/rserve:/rserve
 
