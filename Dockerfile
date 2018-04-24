@@ -1,10 +1,10 @@
 # our R base image
 FROM r-base
 
-RUN apt-get update && apt-get install -y --allow-downgrades \
+RUN apt-get update && apt-get install -y \
 	libcurl4-openssl-dev \
 	libssl-dev \
-	libcairo2=1.15.10-1 libcairo2-dev
+	libcairo2-dev
 
 # install packages
 # these are ones I like
